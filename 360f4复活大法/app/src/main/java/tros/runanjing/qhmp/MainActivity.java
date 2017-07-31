@@ -1,13 +1,14 @@
 package tros.runanjing.qhmp;
 
-import android.content.*;
 import android.os.*;
 import android.support.v7.app.*;
 import android.support.v7.widget.*;
+import android.view.*;
 import android.widget.*;
 import java.io.*;
 
 import android.support.v7.widget.Toolbar;
+import java.lang.Process;
 public class MainActivity extends AppCompatActivity 
 {
     @Override
@@ -27,48 +28,42 @@ public class MainActivity extends AppCompatActivity
 			Toast.makeText(this, "警告，你的设备不是360f4系列，请谨慎使用", Toast.LENGTH_LONG);
 		}
 		TextView textView = (TextView) findViewById(R.id.text);
-		textView.setText("你的手机型号:" + android.os.Build.MODEL);}
-
-
-
-	public class CopyFileFromAssets{
-		/**
-		 　　*
-		 　　* @param myContext
-		 　　* @param ASSETS_NAME 要复制的文件名
-		 　　* @param savePath 要保存的路径
-		 　　* @param saveName 复制后的文件名
-		 　　* testCopy(Context context)是一个测试例子。
-		 　　*/
-		public  void copy(Context myContext, String ASSETS_NAME, String savePath, String saveName)
-		{
-			String filename = "mnt/sdcard/TWRP" + "/" + "rec.zip";
-			File dir = new File(filename);
-			// 如果目录不中存在，创建这个目录
-			if (!dir.exists())
-				dir.mkdir();
-			try
-			{
-				if (!(new File(filename)).exists())
+		textView.setText("你的手机型号:" + android.os.Build.MODEL);
+		Button 数据=(Button)findViewById(R.id.数据);
+		Button 脚本=(Button)findViewById(R.id.脚本);
+		数据.setOnClickListener(new View.OnClickListener(){
+				@Override
+				public void onClick(View v)
 				{
-					InputStream is = myContext.getResources().getAssets()
-						.open("360F4rec_V3.zip");
-					FileOutputStream fos = new FileOutputStream(filename);
-					byte[] buffer = new byte[7168];
-					int count = 0;
-					while ((count = is.read(buffer)) > 0)
+					try
 					{
-						fos.write(buffer, 0, count);
+						InputStream in=getAssets().open("360F4rec.zip");
+						byte[] buff=new byte[in.available()];
+						in.read(buff);
+						FileOutputStream ou=new FileOutputStream("/mnt/sdcard/rec.zip");
+						ou.write(buff);	
+						ou.close();	
 					}
-					fos.close();
-					is.close();
+					catch (Exception e)
+					{
+					}
 				}
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
+		);
+		脚本.setOnClickListener(new View.OnClickListener(){
+				@Override
+				public void onClick(View v)
+				{
+					try
+					{
+						Runtime.getRuntime().exec(new String[]{"su","-c","id"});
+					}
+					catch (Exception e)
+					{
+
+					}
+				}
 			}
-		}
-		
-	}
+			);
+    }  
 }
