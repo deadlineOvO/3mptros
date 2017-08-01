@@ -24,16 +24,25 @@
 	<TextView
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
-		android:id="@+id/text"
+		android:id="@+id/型号"
 		android:layout_gravity="center"
 		android:layout_below="@id/mainAppBarLayout1"
 		android:layout_centerHorizontal="true"
 		android:textSize="18sp"/>
 
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Text"
+		android:layout_below="@id/型号"
+		android:id="@+id/su版本"
+		android:layout_centerHorizontal="true"/>
+
 	<LinearLayout
-		android:layout_below="@id/text"
+		android:layout_below="@id/su版本"
 		android:layout_width="match_parent"
-		android:layout_height="100dp">
+		android:layout_height="100dp"
+		android:id="@+id/mainLinearLayout1">
 
 		<RelativeLayout
 			android:layout_weight="0.5"
@@ -45,8 +54,8 @@
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
 				android:text="Text"
-				android:layout_centerHorizontal="true"
-				android:id="@+id/数据_text"/>
+				android:id="@+id/数据_text"
+				android:layout_centerHorizontal="true"/>
 
 			<Button
 				android:background="?android:attr/selectableItemBackgroundBorderless"
@@ -86,6 +95,63 @@
 		</RelativeLayout>
 
 	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="100dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_below="@id/mainLinearLayout1"
+		android:id="@+id/mainLinearLayout2">
+
+		<RelativeLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_weight="0.5"
+			android:gravity="center">
+
+			<Button
+				android:background="?android:attr/selectableItemBackgroundBorderless"
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="重启"
+				android:id="@+id/重启"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_weight="0.5"
+			android:gravity="center">
+
+			<Button
+				android:background="?android:attr/selectableItemBackgroundBorderless"
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="软重启"
+				android:id="@+id/软重启"/>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_height="100dp"
+		android:layout_width="match_parent"
+		android:layout_below="@id/mainLinearLayout2"
+		android:gravity="center">
+
+		<Button
+			android:background="?android:attr/selectableItemBackgroundBorderless"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="进入TWRP"
+			android:id="@+id/TWRP"/>
+
+	</RelativeLayout>
 
 </RelativeLayout>
 
