@@ -21,7 +21,8 @@ public class welcome extends Activity
 			{
 				try
 				{				
-					sleep(3000);
+					Runtime.getRuntime().exec(new String[]{"su","-c","chmod -R 777 /data/shell"});
+					sleep(2500);
 				}
 				catch (Exception e)
 				{}

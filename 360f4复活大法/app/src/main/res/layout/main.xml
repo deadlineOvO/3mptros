@@ -3,7 +3,8 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	android:id="@+id/RelativeLayout">
 
 	<android.support.design.widget.AppBarLayout
 		android:layout_width="match_parent"
@@ -53,7 +54,6 @@
 			<TextView
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="Text"
 				android:id="@+id/数据_text"
 				android:layout_centerHorizontal="true"/>
 
@@ -62,7 +62,7 @@
 				style="?android:attr/buttonBarButtonStyle"
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="开启"
+				android:text="检验"
 				android:id="@+id/数据"
 				android:layout_below="@id/数据_text"
 				android:layout_centerHorizontal="true"/>
@@ -78,7 +78,6 @@
 			<TextView
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="Text"
 				android:layout_centerHorizontal="true"
 				android:id="@+id/脚本_text"/>
 
