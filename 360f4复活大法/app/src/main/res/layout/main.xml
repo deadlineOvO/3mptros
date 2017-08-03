@@ -22,34 +22,18 @@
 
 	</android.support.design.widget.AppBarLayout>
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:id="@+id/型号"
-		android:layout_gravity="center"
-		android:layout_below="@id/mainAppBarLayout1"
-		android:layout_centerHorizontal="true"
-		android:textSize="18sp"/>
-
-	<TextView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="Text"
-		android:layout_below="@id/型号"
-		android:id="@+id/su版本"
-		android:layout_centerHorizontal="true"/>
-
 	<LinearLayout
-		android:layout_below="@id/su版本"
 		android:layout_width="match_parent"
 		android:layout_height="100dp"
-		android:id="@+id/mainLinearLayout1">
+		android:id="@+id/mainLinearLayout1"
+		android:layout_below="@id/mainAppBarLayout1">
 
 		<RelativeLayout
 			android:layout_weight="0.5"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:gravity="center">
+			android:gravity="center"
+			>
 
 			<TextView
 				android:layout_height="wrap_content"
@@ -140,17 +124,67 @@
 		android:layout_height="100dp"
 		android:layout_width="match_parent"
 		android:layout_below="@id/mainLinearLayout2"
-		android:gravity="center">
+		android:gravity="center"
+		android:id="@+id/mainRelativeLayout1">
 
 		<Button
 			android:background="?android:attr/selectableItemBackgroundBorderless"
-			style="?android:attr/buttonBarButtonStyle"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:text="进入TWRP"
-			android:id="@+id/TWRP"/>
+			android:id="@+id/TWRP"
+			style="?android:attr/buttonBarButtonStyle"/>
 
 	</RelativeLayout>
+
+	<android.support.v7.widget.CardView
+		android:id="@+id/card_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:cardCornerRadius="8dp"
+		android:layout_below="@id/mainRelativeLayout1"
+		app:elevation="5dp"
+		android:layout_margin="8dp"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+		<RelativeLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:gravity="center">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/型号"
+				android:textSize="18sp"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Text"
+				android:layout_below="@id/型号"
+				android:id="@+id/su版本"
+				android:textSize="15sp"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Text"
+				android:id="@+id/存储"
+				android:layout_below="@id/su版本"
+				android:textSize="15sp"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Text"
+				android:layout_below="@id/存储"
+				android:id="@+id/wifi"
+				android:textSize="15sp"/>
+
+		</RelativeLayout>
+
+	</android.support.v7.widget.CardView>
 
 </RelativeLayout>
 

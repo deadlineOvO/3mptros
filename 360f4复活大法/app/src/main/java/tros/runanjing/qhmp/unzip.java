@@ -1,12 +1,13 @@
 package tros.runanjing.qhmp;
 
+import android.content.*;
 import java.io.*;
-import java.util.zip.*;
+import java.util.zip.*;  
 
 public class unzip//文件解压
 {
 	// 解压zip
-	
+
 	public static void unzip (InputStream is, String dir) throws IOException  
 	{  
 		File dest = new File(dir);  
@@ -51,3 +52,4 @@ public class unzip//文件解压
 		}  
 
 	}  }
+
