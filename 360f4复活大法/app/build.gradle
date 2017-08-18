@@ -8,8 +8,8 @@ android {
         applicationId "tros.runanjing.qhmp"
         minSdkVersion 21
         targetSdkVersion 21
-        versionCode 20170803
-        versionName "1.0"
+        versionCode 20170818
+        versionName "1.1"
     }
     buildTypes {
         release {

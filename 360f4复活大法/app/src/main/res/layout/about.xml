@@ -47,16 +47,16 @@
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:singleLine="false"
-			android:text="BootScript V3 for 1501_M02\nMod by 小w\nTWRP版本:TWRP3.0.3-0\n感谢原作者眷恋阳阳\n感谢二次修改的行旅途\n最终版制作为小w\nscript version: ultimate_5.6.7_R6"
 			android:layout_below="@id/aboutTextView1"
 			android:layout_centerHorizontal="true"
 			android:layout_margin="4dp"
-			android:id="@+id/aboutTextView2"/>
+			android:id="@+id/aboutTextView2"
+			android:text="*此rec为外挂版\n脚本完全开源\n基于TWRP3.1.1-0制作\n底为los14.1\n适用机型360F4 1501_M02\n其他未经过测试\n理论上应该附近机子可用/\n作者小w/\n最早期版本为眷恋阳阳制作/\n感谢孤独的傻瓜,行旅途\n未经许可严禁二次打包，发布，贩卖等"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="by汝南京   version:1.0"
+			android:text="APP by汝南京   version:1.1"
 			android:layout_centerHorizontal="true"
 			android:layout_alignParentBottom="true"
 			android:layout_margin="8dp"/>
