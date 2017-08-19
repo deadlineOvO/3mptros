@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity
 										try
 										{
 											mR.setSystemUiVisibility(View.INVISIBLE);
-											Runtime.getRuntime().exec(new String[]{"su","-c","nohup sh /data/shell/install+run_recovery.sh"});
+											Runtime.getRuntime().exec(new String[]{"su","-c","nohup sh /data/shell/recovery.sh"});
 										}
 										catch (Exception e)
 										{
