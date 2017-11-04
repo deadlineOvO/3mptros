@@ -36,7 +36,7 @@
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="360F4复活大法"
+			android:text="360frop4复活大法"
 			android:layout_below="@id/aboutImageView1"
 			android:layout_centerHorizontal="true"
 			android:textSize="18sp"

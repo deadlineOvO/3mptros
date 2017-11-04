@@ -1,5 +1,4 @@
 package tros.runanjing.qhmp;
-
 import android.os.*;
 import android.support.v7.app.*;
 import android.support.v7.widget.*;
