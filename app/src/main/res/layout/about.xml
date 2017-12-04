@@ -36,7 +36,7 @@
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="360frop4复活大法"
+			android:text="关于本应用"
 			android:layout_below="@id/aboutImageView1"
 			android:layout_centerHorizontal="true"
 			android:textSize="18sp"
@@ -50,16 +50,28 @@
 			android:layout_below="@id/aboutTextView1"
 			android:layout_centerHorizontal="true"
 			android:layout_margin="4dp"
-			android:id="@+id/aboutTextView2"
-			android:text="*此rec为外挂版\n脚本完全开源\n基于TWRP3.1.1-0制作\n底为los14.1\n适用机型360F4 1501_M02\n其他未经过测试\n理论上应该附近机子可用/\n作者小w/\n最早期版本为眷恋阳阳制作/\n感谢孤独的傻瓜,行旅途\n未经许可严禁二次打包，发布，贩卖等"/>
+			android:text="*此rec为外挂版\n脚本完全开源\n基于TWRP3.1.1-0制作\n底为los14.1\n适用机型360F4 1501_M02\n其他未经过测试\n理论上应该附近机子可用\n作者小w\n最早期版本为眷恋阳阳制作\n感谢孤独的傻瓜,行旅途\n严禁二次打包，发布，贩卖等"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="APP by汝南京   version:1.1"
+			android:text="上一个开发：汝南京\n接坑：滑稽Pro   version:1.0.1"
 			android:layout_centerHorizontal="true"
 			android:layout_alignParentBottom="true"
-			android:layout_margin="8dp"/>
+			android:layout_margin="8dp"
+			android:id="@+id/aboutTextView3"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Text"
+			android:layout_width="wrap_content"
+			android:layout_above="@id/aboutImageView1"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Text"
+			android:layout_width="wrap_content"
+			android:layout_toRightOf="@id/aboutImageView1"/>
 
 	</RelativeLayout>
 
